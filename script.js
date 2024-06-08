@@ -3,36 +3,40 @@ let rock;
 let paper;
 let scissors;
 const h1 = document.createElement("h1");
-let ComputerWeapon;
+let computerSelection;
 let humanScore;
 let computerScore;
+let getHumanChoice;
 
 // New Game
 const NewGame = document.getElementsByClassName("New-Game");
 NewGame[0].addEventListener("click", gamestart);
+
 function gamestart() {
   console.log("hello world");
   computerChoice();
-  console.log(ComputerWeapon);
-  getHumanChoice;
+  console.log(computerSelection);
+  //HUMAN CHOICE
+  getHumanChoice = prompt("Human Selection").toUpperCase();
+  //getHumanChoice = getHumanChoice.toUpperCase;
+  console.log(getHumanChoice);
 }
 
 // COMPUTER CHOICE
 function computerChoice() {
   let cc = Math.floor(Math.random() * 3) + 1;
   if (cc === 1) {
-    ComputerWeapon = "ROCK";
+    computerSelection = "ROCK";
   } else if (cc === 2) {
-    ComputerWeapon = "SCISSORS";
+    computerSelection = "SCISSORS";
   } else {
-    ComputerWeapon = "PAPER";
+    computerSelection = "PAPER";
   }
 }
 
-//HUMAN CHOICE
-
-const getHumanChoice = function = prompt("Human Selection");
-};
+function gameLogic(player1, player2) {
+  player1 === "ROCK" && player2 === "Scissors";
+}
 
 //game round 1/3 (in html shows current round)
 ///computer choice (in html shows computer choice which is a random)
