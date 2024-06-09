@@ -5,8 +5,8 @@ let scissors;
 const h1 = document.createElement("h1");
 let computerSelection;
 let humanScore;
-let computerScore;
-let getHumanChoice;
+let computerScore =0;
+let getHumanChoice=0;
 
 // New Game
 const NewGame = document.getElementsByClassName("New-Game");
@@ -34,8 +34,12 @@ function computerChoice() {
   }
 }
 
-function gameLogic(player1, player2) {
-  player1 === "ROCK" && player2 === "Scissors";
+function playRound(computerSelection, getHumanChoice) {
+  if (computerSelection === "ROCK" && getHumanChoice === "SCISSORS"){computerScore++1};
+  else if (computerSelection==="ROCK" && getHumanChoice==="PAPER"){humanScore++1};
+  else if (computerSelection==="PAPER" && getHumanChoice==="ROCK") {}
+
+  else {/*draw playRound*/}
 }
 
 //game round 1/3 (in html shows current round)
